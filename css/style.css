@@ -1,32 +1,37 @@
-/* nav bar */
+/* NAVBAR */
 nav {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* adding a glassmorphism effect - learned here: https://codehalweb.com/responsive-glassmorphism-navbar-html-css-js/ */
+  z-index: 99;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.075);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  width: 100%;
+  overflow: hidden;
 }
+
 nav ul {
-    border-style:groove;
-    border-color: lightgray;
-    border-radius: 5px;
     background-color: black;
     list-style-type: none;
-    padding: 25px;
+    padding: 0px;
+    margin: 0;
     box-shadow:	#a78400;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   nav ul li {
-    padding-left: 40px;
-    padding-right: 40px
+    display: block;
   }
-
 
   nav ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 15px;
     opacity: .8;
     transition: .6s;
+    text-align: center;
+    padding: 30px 35px;
+    display: inline-block;
   }
 
   nav ul li a:hover {
@@ -34,7 +39,6 @@ nav ul {
     font-family: 'Lucida Sans';
     border-radius: 10px;
     font-style: italic;
-    font-size: 15px;
     /* code for opactiy (not color) transition paraphrased from stackoverflow */
     opacity: 1.0;
     color: #b1bfde;
@@ -48,3 +52,8 @@ nav ul {
     color:rgb(255, 255, 255);
     font-weight: bold;
   }
+
+/* BODY + BACKGROUND */
+body {
+  background-color: black;
+}
