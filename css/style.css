@@ -9,49 +9,90 @@ nav {
   background: rgba(255, 255, 255, 0.075);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 nav ul {
-    background-color: black;
-    list-style-type: none;
-    padding: 0px;
-    margin: 0;
-    box-shadow:	#a78400;
-  }
+  background-color: black;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+  box-shadow:	#a78400;
+}
 
-  nav ul li {
-    display: block;
-  }
+/* learned this animation here: https://dev.to/kiranrajvjd/10-simple-navigation-bar-hover-animations-1980 */
+nav ul li {
+  display: block;    
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  position: relative;
+}
 
-  nav ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    opacity: .8;
-    transition: .6s;
-    text-align: center;
-    padding: 30px 35px;
-    display: inline-block;
-  }
+nav:hover::before,
+nav li:hover::after {
+  width: 10px;
+  height: 10px;
+  border-color: #fff;
+}
 
-  nav ul li a:hover {
-    background-color: lightcyan;
-    font-family: 'Lucida Sans';
-    border-radius: 10px;
-    font-style: italic;
-    /* code for opactiy (not color) transition paraphrased from stackoverflow */
-    opacity: 1.0;
-    color: #b1bfde;
-    transition: opacity .6s ease-in-out;
-                  -moz-transition: opacity .6s ease-in-out;
-                  -webkit-transition: opacity .6s ease-in-out;
-    transition: .6s;
-  }
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  opacity: .8;
+  transition: .6s;
+  text-align: center;
+  padding: 30px 35px;
+}
 
-  .active {
-    color:rgb(255, 255, 255);
-    font-weight: bold;
-  }
+nav ul li a span {
+  position: relative;
+  padding: 10px 0px;
+  display: inline-block;
+}
+
+nav li a:after,
+nav li a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.3s ease;
+}
+
+nav li a:after {
+  width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+nav li a:before {
+  width: 0%;
+  height: 0%;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+nav li a:hover::before,
+nav li a:hover::after {
+  width: 10px;
+  height: 10px;
+  border-color: #fff;
+}
+
+.active {
+  color:rgb(255, 255, 255);
+  font-weight: bold;
+}
 
 /* BODY + BACKGROUND */
 body {
