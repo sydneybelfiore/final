@@ -97,4 +97,70 @@ nav li a:hover::after {
 /* BODY + BACKGROUND */
 body {
   background-color: black;
+  color: white;
+}
+
+/* CONTACT PAGE LAYOUT */
+/* used this link for help layering text over images: https://www.geeksforgeeks.org/how-to-place-text-on-image-using-html-and-css/ */
+.contact_text {
+  position: absolute;
+  left: 45%;
+  top: 30%;
+  width: 40%;
+  z-index: 10;
+  background-color: rgba(15, 15, 15);
+  padding: 50px;
+  border: 2px solid white;
+}
+
+.contact_form {
+  position: absolute;
+  left: 45%;
+  top: 62%;
+  width: 40%;
+  z-index: 10;
+  background-color: rgb(30, 30, 30);
+  padding: 50px;
+  border: 2px solid white;
+}
+
+form input{
+  background-color: rgba(10, 10, 10, 0.8);
+  height: 50px;
+}
+
+input[type="submit"] {
+  background-color: rgba(170, 170, 170);
+  color: black;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 16%;
+}
+
+input[type="submit"]:hover{
+  background-color: rgba(250, 250, 250);
+  border: 1px solid black;
+}
+
+/* STYLING THE REACT GALLERY */
+/* figured out the responsive grid here: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* learned about transitions here: https://www.w3schools.com/css/css3_transitions.asp */
+  transition-duration: 0.3s;
+}
+
+.gallery img:hover {
+  /* transform syntax: https://www.w3schools.com/css/css3_2dtransforms.asp */
+  transform: scale(1.05);
 }

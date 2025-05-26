@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
 
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+
     <!-- external links -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Load React API -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- Load React DOM-->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Load Babel Compiler -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
 </head>
 <body>
     <header> 
@@ -21,5 +34,85 @@
             </ul>
         </nav>
     </header>
+
+    <!--ONE OF MY CHALLENGES: USING REACT + GRID TO CREATE MY GALLERY-->
+        <!--i've made 2 galleries in my past websites for this class using flexboxes so i wanted to change it up-->
+        <!--using react ended up being a lot more efficient and looks better in my opinion-->
+
+    <!--react will render compoments in this div-->
+    <div id="root" style="padding-top: 70px;"></div>
+
+    <script type="text/babel">
+
+        // array containing the links to each of my images
+        const imageUrls = [
+            "/images/gallery1.jpg",
+            "/images/gallery2.jpg",
+            "/images/gallery3.jpg",
+            "/images/gallery4.jpg",
+            "/images/gallery5.jpg",
+            "/images/gallery38.jpg",
+            "/images/gallery7.jpg",
+            "/images/gallery8.jpg",
+            "/images/gallery9.jpg",
+            "/images/gallery10.jpg",
+            "/images/gallery11.jpg",
+            "/images/gallery12.jpg",
+            "/images/gallery13.jpg",
+            "/images/gallery14.jpg",
+            "/images/gallery15.jpg",
+            "/images/gallery16.jpg",
+            "/images/gallery17.jpg",
+            "/images/gallery18.jpg",
+            "/images/gallery19.jpg",
+            "/images/gallery20.jpg",
+            "/images/gallery21.jpg",
+            "/images/gallery22.jpg",
+            "/images/gallery23.jpg",
+            "/images/gallery24.jpg",
+            "/images/gallery25.jpg",
+            "/images/gallery26.jpg",
+            "/images/gallery27.jpg",
+            "/images/gallery28.jpg",
+            "/images/gallery29.jpg",
+            "/images/gallery30.jpg",
+            "/images/gallery31.jpg",
+            "/images/gallery32.jpg",
+            "/images/gallery33.jpg",
+            "/images/gallery36.jpg",
+            "/images/gallery37.jpg",
+            "/images/gallery39.jpg",
+        ]
+
+        // creating a react compoment that will create the gallery
+        function Gallery() {
+        return (
+            <div>
+
+            {/*page heading + a little description*/}
+            <h1 style={{textAlign: "center", marginBottom: "0"}}>Gallery</h1>
+            <p style={{textAlign: "center", marginTop: "0", marginBottom: "0"}}>------</p>
+            <p style={{textAlign: "center", marginTop: "5px",}}>Below are some of my best bakes and most delicious dishes!</p>
+
+            
+            {/*creating the gallery*/}
+            <div className="gallery">
+
+                {/* iterating through the list of image urls to create image tags - learned here: https://www.w3schools.com/react/react_lists.asp */}  
+                    {/*then... keeping track of the img with a key, getting the url as the source and adding an alt */}
+                {imageUrls.map((url, index) => (
+                    <img key={index} src={url} alt={`Gallery Image ${index + 1}`}/>
+                ))}
+            </div>
+            </div>
+        );
+        }
+
+        // Finds a div with id root -- creates a reactor root (place where your app will live)
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+
+        // Renders the app inside the root div
+        root.render(<Gallery />);
+    </script>
 </body>
 </html>
