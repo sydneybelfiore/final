@@ -100,6 +100,68 @@ body {
   color: white;
 }
 
+/* STYLING THE HOMEPAGE */
+#homepage_img{
+  width: 100%;
+  margin-top: 62px;
+  opacity:0.5;
+}
+
+#homepage_button {
+  position: absolute;
+  z-index: 10;
+  top: 55%;
+  left: 46%;
+  background-color: rgba(10, 10, 10, 0.8);
+  color: white;
+  width: 12%;
+  height: 7%;
+  border-radius: 45px;
+  border: 1px solid white;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+}
+
+#homepage_button:hover{
+  background-color: rgba(255 255, 255, 0.85);
+  color: black;
+  border: 2px solid black;
+}
+
+#homepage_intro_text {
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 44.6%;
+  z-index: 10;
+  font-size: xx-large;
+}
+
+/* STYLING THE REACT GALLERY */
+/* figured out the responsive grid here: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* learned about transitions here: https://www.w3schools.com/css/css3_transitions.asp */
+  transition-duration: 0.3s;
+}
+
+.gallery img:hover {
+  /* transform syntax: https://www.w3schools.com/css/css3_2dtransforms.asp */
+  transform: scale(1.05);
+}
+
 /* CONTACT PAGE LAYOUT */
 /* used this link for help layering text over images: https://www.geeksforgeeks.org/how-to-place-text-on-image-using-html-and-css/ */
 .contact_text {
@@ -130,37 +192,40 @@ form input{
 }
 
 input[type="submit"] {
-  background-color: rgba(170, 170, 170);
+  background-color: rgba(255, 255, 255, 0.9);
   color: black;
-  border: none;
-  border-radius: 7px;
+  border: 1px solid black;
+  border-radius: 15px;
   cursor: pointer;
   width: 16%;
+  transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+  font-family: "houschka-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
-input[type="submit"]:hover{
-  background-color: rgba(250, 250, 250);
-  border: 1px solid black;
+input[type="submit"]:hover{ 
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid white;
+  color: white;
 }
 
-/* STYLING THE REACT GALLERY */
-/* figured out the responsive grid here: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
-  gap: 20px;
-  padding: 20px;
+/* FONTS */
+/* link to the font: https://fonts.adobe.com/fonts/houschka-pro */
+body {
+  font-family: "houschka-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  /* learned about transitions here: https://www.w3schools.com/css/css3_transitions.asp */
-  transition-duration: 0.3s;
+h2 {
+  font-family: "houschka-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
-.gallery img:hover {
-  /* transform syntax: https://www.w3schools.com/css/css3_2dtransforms.asp */
-  transform: scale(1.05);
+h1{
+  font-family: "houschka-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
