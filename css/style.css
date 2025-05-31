@@ -115,8 +115,8 @@ body {
   transform: translate(-50%);
   background-color: rgba(10, 10, 10, 0.8);
   color: white;
-  width: 12%;
-  height: 7%;
+  width: 13%;
+  height: 6.5%;
   border-radius: 45px;
   border: 1px solid white;
   display: flex;
@@ -145,6 +145,81 @@ body {
   text-align: center;
 }
 
+/* STYLING THE ABOUT ME PAGE */
+.about_text {
+  margin: 200px;
+  margin-top: 100px;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: rgb(25, 25, 25);
+}
+
+/* STYLING THE RECIPES PAGE */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 90px;
+  background-color: #131313;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 90px;
+  background-color: #242424;
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 90px;
+  background-color: #1e1e1e;
+}
+
+.text_box {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#youtube {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.image_box {
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* learned the transition here: https://css-tricks.com/css-link-hover-effects/ */
+.text_box a {
+  color: rgb(206, 163, 163); 
+  text-decoration: none;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.text_box a:hover{
+  box-shadow: inset 100px 0 0 0 rgb(206, 163, 163);
+  border-radius: 2px;
+  color: white;
+}
+
+
 /* STYLING THE REACT GALLERY */
 /* figured out the responsive grid here: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
 .gallery {
@@ -172,7 +247,7 @@ body {
 .contact_text {
   position: absolute;
   left: 45%;
-  top: 30%;
+  top: 29%;
   width: 40%;
   z-index: 10;
   background-color: rgba(15, 15, 15);
@@ -215,12 +290,23 @@ input[type="submit"]:hover{
   color: white;
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  background-color: #0c0c0c;
+  color: #ffffff;
+  border-top: 1px solid #d3d3d3;
+}
+
 /* FONTS */
 /* link to the font: https://fonts.adobe.com/fonts/houschka-pro */
 body {
   font-family: "houschka-pro", sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 18px;
 }
 
 h2 {
