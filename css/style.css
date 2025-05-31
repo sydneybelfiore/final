@@ -98,12 +98,21 @@ nav li a:hover::after {
 body {
   background-color: black;
   color: white;
-}
+  opacity: 0;
+  animation: fadeIn 1.3s ease-in-out forwards;
+  }
+
+  /* fade in effect learned here: https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
 
 /* STYLING THE HOMEPAGE */
 #homepage_img{
   width: 100%;
-  margin-top: 62px;
+  margin-top: 68px;
   opacity:0.5;
 }
 
