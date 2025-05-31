@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get to Know Me</title>
+
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+
+    <!-- external links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pzs4bni.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header> 
+         <!-- NAVBAR -->
+        <nav>
+            <ul style="padding-left: 5px;">
+                <li style="float:left;"><a href="index.html"><span>HOME</span></a></li>
+                <li style="float: right;"><a href="contact.html"><span>CONTACT</span></a></li>
+                <li style="float: right;"><a href="gallery.html"><span>GALLERY</span></a></li>
+                <li style="float: right;"><a href="recipes.html"><span>RECIPES</span></a></li>
+                <li style="float: right;"><a class="active" href="aboutMe.html"><span>ABOUT ME</span></a></li>               
+            </ul>
+        </nav>
+    </header> 
+
+    <div class=about_text>
+        <h1>GET TO KNOW ME</h1>
+        <p>​My name is Sydney Belfiore, I'm a junior at Eastside Preparatory School, and I LOVE to bake and cook. In my opinion, there's nothing better than blasting music while making delicious meals and pastries for my loved ones, because after all, food is my love language.</p>
+        <p>My journey into baking began during Covid, because like many others, I found myself seeking out new hobbies while stuck at home. Although I hadn't planned on exploring baking, my love for cookies and baked goods inspired me to give it a try. I slowly started to improve my baking repertoire from crafting simple chocolate chip cookies to mastering more complex and technique heavy bakes such as macarons and layered cakes. My parents aren't seasoned bakers or cooks, so I acquired most of my knowledge from watching hours of The Great British Baking Show, YouTube tutorials, and looking through cooking and baking books I got for my birthday and Christmas. </p>
+        <p>Cooking soon followed my baking adventures as I recognized that mastering the kitchen meant embracing both sweet and savory, so I delved into the world of cooking alongside baking. While initially struggling to cook even the simplest of dishes such as eggs or pancakes, once again, I educated myself with countless Netflix shows and YouTube videos, gradually honing my skills. Now, I enjoy preparing dinner for my family whether it's homemade pasta, curry, or other Asian dishes.</p>
+        <p>During the pandemic, I created both a YouTube channel and recipe book to share my baking endeavors. Although I didn't continue creating videos, this website allows me to share my story and some of my favorite recipes. Despite the challenges of Covid, I'm grateful for my newfound passion and hope to improve my skills in the future, aspiring to get a job in the food industry.</p>
+        <p>Beyond the kitchen, I'm an avid sports and music enthusiast. In my freetime, I love to play basketball, ultimate, frisbee or play the electric guitar if I'm not too busy playing with my dog Cleo. I'm also a huge Marvel, Star Wars, and Disney fan. Also, I love spending time with my family whether we're in midst of an intense pickball tournament or solving puzzles to set a new record at an escape room.</p>
+        <p>This website showcases my love and skills for cooking... so I hope you enjoy exploring and learning more about me! Note: make sure to checkout the gallery to see all of my amazing culinary creations :)</p>
+    </div>
+
+    <!--creating a slideshow gallery... learned here: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp-->
+    <!-- Container for the image gallery -->
+    <div class="slideshow_container">
+
+        <!-- Full-width images with number text -->
+        <div class="slides">
+            <div class="number">1 / 6</div>
+            <img src="images/family.jpg" style="width:100%" alt="My Family in Japan">
+        </div>
+
+        <div class="slides">
+            <div class="number">2 / 6</div>
+            <img src="images/friends.jpg" style="width:100%" alt="My Friends at Disney">
+        </div>
+
+        <div class="slides">
+            <div class="number">3 / 6</div>
+            <img src="images/bball.jpg" style="width:100%" alt="Basketball">
+        </div>
+
+        <div class="slides">
+            <div class="number">4 / 6</div>
+            <img src="images/frisbee.jpg" style="width:100%" alt="Frisbee">
+        </div>
+
+        <div class="slides">
+            <div class="number">5 / 6</div>
+            <img src="images/guitar.jpg" style="width:100%" alt="Playing in a Band">
+        </div>
+
+        <div class="slides">
+            <div class="number">6 / 6</div>
+            <img src="images/cleo.jpg" style="width:100%" alt="Me and Cleo">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- thumbnail images -->
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="images/family.jpg" style="width:100%" onclick="currentSlide(1)" alt="My Family in Japan">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/friends.jpg" style="width:100%" onclick="currentSlide(2)" alt="My Friends at Disney">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/bball.jpg" style="width:100%" onclick="currentSlide(3)" alt="Basketball">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/frisbee.jpg" style="width:100%" onclick="currentSlide(4)" alt="Frisbee">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/guitar.jpg" style="width:100%" onclick="currentSlide(5)" alt="Playing Guitar in a Band">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/cleo.jpg" style="width:100%" onclick="currentSlide(6)" alt="Me and my Dog Cleo">
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <p>&copy; Sydney Belfiore. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
