@@ -302,6 +302,16 @@ body {
   justify-content: center;
 }
 
+.image_box img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image_box img:hover {
+  /* transform syntax: https://www.w3schools.com/css/css3_2dtransforms.asp */
+  transform: scale(1.02);
+  filter: blur(1px);
+}
+
 /* learned the transition here: https://css-tricks.com/css-link-hover-effects/ */
 .text_box a {
   color: rgb(206, 163, 163); 
