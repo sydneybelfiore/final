@@ -7,17 +7,17 @@ nav {
   z-index: 99;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.075);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
   overflow: hidden;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 1.1%;
+  padding-bottom: 1.1%;
 }
 
 nav ul {
   background-color: black;
   list-style-type: none;
-  padding: 0px;
+  padding: 0;
   margin: 0;
   box-shadow:	#a78400;
 }
@@ -33,8 +33,8 @@ nav ul li {
 
 nav:hover::before,
 nav li:hover::after {
-  width: 10px;
-  height: 10px;
+  width: 0;
+  height: 0;
   border-color: #fff;
 }
 
@@ -44,12 +44,12 @@ nav ul li a {
   opacity: .8;
   transition: .6s;
   text-align: center;
-  padding: 30px 35px;
+  padding: 0 2.3vw;
 }
 
 nav ul li a span {
   position: relative;
-  padding: 10px 0px;
+  padding: 0.8vw 0px;
   display: inline-block;
 }
 
@@ -84,8 +84,8 @@ nav li a:before {
 
 nav li a:hover::before,
 nav li a:hover::after {
-  width: 10px;
-  height: 10px;
+  width: 0.9vw;
+  height: 0.9vw;
   border-color: #fff;
 }
 
@@ -112,27 +112,32 @@ body {
 /* STYLING THE HOMEPAGE */
 #homepage_img{
   width: 100%;
-  margin-top: 68px;
+  margin-top: 9.1vh;
   opacity:0.5;
 }
 
-#homepage_button {
+#homepage_overlay {
+  width: 100%;
   position: absolute;
-  z-index: 10;
-  top: 54.5%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -15%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#homepage_button {
   background-color: rgba(10, 10, 10, 0.8);
   color: white;
-  width: 12.5%;
-  height: 6%;
-  border-radius: 45px;
+  padding: 1.1vw 1.9vw;
+  border-radius: 2vw;
   border: 1px solid white;
-  font-size: medium;
-  display: flex;
+  font-size: 2.1vh;
   text-decoration: none;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   box-shadow: none;
   transition: background-color 0.6s ease, color 0.6s ease, border 0.6s ease, box-shadow 0.6s ease;
 }
@@ -146,20 +151,16 @@ body {
 
 #homepage_intro_text {
   color: white;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 10;
-  font-size: xx-large;
+  font-size: 4.3vh;
   text-align: center;
+  margin: 1vh;
 }
 
 /* STYLING THE ABOUT ME PAGE */
 .about_text {
-  margin-top: 77px;
-  padding-inline: 190px;
-  padding-block: 50px;
+  margin-top: 10vh;
+  padding-inline: 11vw;
+  padding-block: 7vh;
   background-color: rgb(25, 25, 25);
 }
 
@@ -170,7 +171,7 @@ body {
   box-sizing: border-box;
   width: 75%;
   margin: 0 auto;
-  padding-block: 50px;
+  padding-block: 7vh;
 }
 
 /* Hide the images by default */
@@ -190,11 +191,11 @@ body {
   position: absolute;
   top: 40%;
   width: auto;
-  padding: 16px;
-  margin-top: -50px;
+  padding: 1vw;
+  margin-top: 0;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 4vh;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
@@ -215,8 +216,7 @@ body {
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+  font-size: 5vh;
   position: absolute;
   top: 0;
 }
@@ -225,7 +225,7 @@ body {
 .caption-container {
   text-align: center;
   background-color: #222;
-  padding: 2px 16px;
+  padding: 0.8vh 1vw;
   color: white;
 }
 
@@ -255,48 +255,44 @@ body {
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 0;
 }
 
 .row1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  padding: 90px;
+  gap: 3.3vw;
+  padding: 9vh;
   background-color: #131313;
 }
 
 .row2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  padding: 90px;
+  gap: 3.3vw;
+  padding: 9vh;
   background-color: #242424;
 }
 
 .row3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  padding: 90px;
+  gap: 3.3vw;
+  padding: 9vh;
   background-color: #1e1e1e;
 }
 
 .text_box {
   border: none;
-  border-radius: 8px;
-  padding: 20px;
+  padding: 1vw;
 }
 
 #youtube {
   border: none;
-  border-radius: 8px;
-  padding: 20px;
 }
 
 .image_box {
   border: none;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,14 +327,14 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
-  gap: 20px;
-  padding: 20px;
+  gap: 1.23vw;
+  padding: 1.23vw;
 }
 
 .gallery img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0.5vw;
   /* learned about transitions here: https://www.w3schools.com/css/css3_transitions.asp */
   transition-duration: 0.3s;
 }
@@ -349,32 +345,37 @@ body {
 }
 
 /* CONTACT PAGE LAYOUT */
-/* used this link for help layering text over images: https://www.geeksforgeeks.org/how-to-place-text-on-image-using-html-and-css/ */
-.contact_text {
+#contact_overlay {
+  width: 100%;
   position: absolute;
-  left: 45%;
-  top: 29%;
-  width: 40%;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -30%);
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_text {
+  width: 40%;
   background-color: rgba(15, 15, 15);
-  padding: 50px;
+  padding: 6vh;
   border: 2px solid white;
 }
 
 .contact_form {
-  position: absolute;
-  left: 45%;
-  top: 62%;
   width: 40%;
-  z-index: 10;
   background-color: rgb(30, 30, 30);
-  padding: 50px;
+  padding: 6vh;
   border: 2px solid white;
+  margin-top: 1.5vh;
 }
 
 form input{
   background-color: rgba(10, 10, 10, 0.8);
-  height: 50px;
+  height: 6vh;
   color: white;
 }
 
@@ -382,7 +383,7 @@ input[type="submit"] {
   background-color: rgba(240, 240, 240, 0.9);
   color: black;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 1vw;
   cursor: pointer;
   width: 16%;
   transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
@@ -400,8 +401,8 @@ input[type="submit"]:hover{
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
+  padding: 1.7vw;
+  font-size: 1.8vh;
   background-color: #0c0c0c;
   color: #ffffff;
   border-top: 1px solid #d3d3d3;
@@ -413,7 +414,7 @@ body {
   font-family: "houschka-pro", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 18px;
+  font-size: 2.25vh;
 }
 
 h2 {
