@@ -138,7 +138,7 @@ body {
 }
 
 #homepage_button:hover{
-  background-color: rgba(255 255, 255, 0.85);
+  background-color: rgba(230, 230, 230, 0.85);
   color: black;
   border: 1px solid black;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.4);
@@ -379,7 +379,7 @@ form input{
 }
 
 input[type="submit"] {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(240, 240, 240, 0.9);
   color: black;
   border: 1px solid black;
   border-radius: 15px;
@@ -392,7 +392,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover{ 
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(20, 20, 20, 0.9);
   border: 1px solid white;
   color: white;
 }
