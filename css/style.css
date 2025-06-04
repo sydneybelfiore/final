@@ -4,9 +4,9 @@ nav {
   top: 0;
   left: 0;
   /* adding a glassmorphism effect - learned here: https://codehalweb.com/responsive-glassmorphism-navbar-html-css-js/ */
-  z-index: 99;
+  z-index: 999;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.075);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
   width: 100%;
   overflow: hidden;
@@ -400,6 +400,12 @@ input[type="submit"]:hover{
   background-color: rgba(20, 20, 20, 0.9);
   border: 1px solid white;
   color: white;
+}
+
+/* making sure the root elements are z index 1 so it's below the navbar */
+ #root {
+  position: relative;
+  z-index: 1;
 }
 
 /* FOOTER */
