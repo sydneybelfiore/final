@@ -6,7 +6,7 @@ nav {
   /* adding a glassmorphism effect - learned here: https://codehalweb.com/responsive-glassmorphism-navbar-html-css-js/ */
   z-index: 99;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.075);
+  background: rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
   width: 100%;
   overflow: hidden;
