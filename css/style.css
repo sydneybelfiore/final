@@ -403,7 +403,7 @@ input[type="submit"]:hover{
 }
 
 /* making sure the root elements are z index 1 so it's below the navbar */
- #root {
+ .main_content, #root {
   position: relative;
   z-index: 1;
 }
